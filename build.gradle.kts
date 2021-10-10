@@ -40,10 +40,10 @@ tasks.withType<Jar> {
 		attributes["Main-Class"] = "com.example.demo.DemoApplicationKt"
 	}
 
-	dependsOn(configurations.runtimeClasspath)
-	from ({ configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) } })
+	//dependsOn(configurations.runtimeClasspath)
+	//from ({ configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) } })
 }
 
-springBoot {
-	mainClass.set("com.example.demo.DemoApplicationKt")
-}
+//springBoot {
+//	mainClass.set("com.example.demo.DemoApplicationKt")
+//}
