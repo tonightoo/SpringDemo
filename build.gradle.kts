@@ -39,6 +39,9 @@ tasks.withType<Jar> {
 	manifest {
 		attributes["Main-Class"] = "com.example.demo.DemoApplicationKt"
 	}
+
+	dependsOn(configurations.runtimeClasspath)
+	from ({ configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) } })
 }
 
 springBoot {
