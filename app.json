@@ -1,0 +1,16 @@
+{
+  "name": "springboot-kotlin-demo",
+  "description": "spring demo",
+  "repository": "https://github.com/tonightoo/SpringDemo.git",
+  "addons": [
+    {
+      "plan": "papertrail"
+    }
+  ],
+  "stack": "heroku-20",
+  "buildpacks": [
+    {
+      "url": "heroku/gradle"
+    }
+  ]
+}

@@ -37,6 +37,6 @@ tasks.withType<Test> {
 
 tasks.withType<Jar> {
 	manifest {
-		attributes["Main-Class"] = "com.example.MainKt"
+		attributes["Main-Class"] = "com.example.DemoApplication"
 	}
 }
