@@ -35,6 +35,12 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 }
 
+tasks.withType<Jar> {
+	manifest {
+		attributes["Main-Class"] = "com.example.demo.DemoApplicationKt"
+	}
+}
+
 springBoot {
 	mainClass.set("com.example.demo.DemoApplicationKt")
 }
